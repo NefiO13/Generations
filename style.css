@@ -1,0 +1,49 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0c999e;
+}
+
+
+#fantasyForm {
+    text-align: center;
+    background-color: rgb(65, 125, 204);
+    margin: 90px;
+    padding: 20px;
+}
+*,
+::after,
+::before {
+    box-sizing: content-box;
+ } 
+.btn-light {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background: #0400f3;
+    color: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-light:hover {
+    background: #ffffff;
+    transform: scale(1.1);
+}
+
+h1 {
+    font-family: "jurriaan-3d-shaded", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
+
+p {
+font-family: "gimlet-display", serif;
+    font-weight: 400;
+    font-style: italic;
+}
