@@ -1,6 +1,5 @@
 body {
     height: 100%;
-    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,8 +10,8 @@ body {
 #fantasyForm {
     text-align: center;
     background-color: rgb(65, 125, 204);
-    margin: 100px;
-    padding: 90px;
+    margin: 80px;
+    padding: 50px;
     border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -22,11 +21,11 @@ body {
  } 
 
 .btn-light {
-    margin-top: 20px;
-    padding: 10px 20px;
+    margin-top: 10px;
+    padding: 10px 10px;
     font-size: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     background: #0400f3;
     color: white;
     transition: all 0.3s ease;
@@ -40,12 +39,16 @@ body {
 
 h1 {
     font-family: "jurriaan-3d-shaded", sans-serif;
+    font-size: 90px;
         font-weight: 400;
         font-style: normal;
+        margin-top: 20px;
 }
 
 p {
 font-family: "gimlet-display", serif;
+font-size: 30px;
     font-weight: 400;
     font-style: italic;
+    text-align: center;
 }
