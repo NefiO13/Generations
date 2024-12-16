@@ -1,14 +1,14 @@
 //Generate Prefix
 function genPrefix(firstName) {
     if (firstName.length > 5) {
-        return `The Great`
+        return 'The Great'
     } else {
-        return `Master`
+        return 'Master'
     }
 }
-//Generate first name
+//generate first name
 function genFirstName(firstName) {
-    const firstLetter = firstName.charAT(0).toLowerCase()
+    const firstLetter = firstName.charAt(0).toLowerCase()
     if (firstLetter === 'a') {
         return 'Jeff'
     } else if (firstLetter === 'b') {
@@ -18,63 +18,67 @@ function genFirstName(firstName) {
     }
 }
 
-//Generate Middle Name
+//generate middle name
 function genMiddleName(roadType, favoriteColor) {
     if (roadType === 'road') {
-        return `${favoriteColor}ridge` //example: Blueridge
+        return `${favoriteColor}ridge` //EX:  blueridge
     } else if (roadType === 'street') {
-        return `${favoriteColor}son`
+        return `${favoriteColor}son` //EX: blueson
     } else {
-        return `${favoriteColor}stone`
+        return `${favoriteColor}stone` //EX: bluestone
     }
 }
 
-//Generate Last name
-function genLastname(lastName) {
-    const lastLetter = lastName.charAT(lastName.length - 1)
+//generate Last Name
+function genLastName(lastName) {
+    const lastLetter = lastName.charAt(lastName.length - 1)
     if (lastLetter === 'a') {
         return 'Shadow'
-    } else if (lastLetter === 'e')
+    } else if (lastLetter === 'e') {
         return 'Storm'
-    if (lastLetter === 'i') {
-        return 'Firestrom'
+    } else if (lastLetter === 'i') {
+        return 'Blaze'
     } else if (lastLetter === 'o') {
-        return 'Raider'
+        return 'Thorn'
+    } else if (lastLetter === 'u') {
+        return 'Frost'
     } else {
-        return 'Moon'
+        return 'Moon' // Default last name for letters not matched
     }
-
 }
 
-//generate suffix
+//generate Suffix
 function genSuffix(favoriteAnimal) {
-    return `of ${favoriteAnimal} clan`
+    return `of ${favoriteAnimal} clan.`
 }
-//Master name building Function
+
+//MAster Name Building FUnction
 function genFullName() {
-    //Get the user's Input from html
+    //Get the Users Inputs from HTML Elements
     const firstName = document.getElementById('firstName').value.trim()
     const lastName = document.getElementById('lastName').value.trim()
-    const roadType = document.getElementById('roadType').value.trim()
+    const roadType = document.getElementById('roadType').value
     const favoriteColor = document.getElementById('favoriteColor').value.trim()
     const favoriteAnimal = document.getElementById('favoriteAnimal').value.trim()
-    //Run Name Generating functions and Store them in new variables
+
+    //Run Name Generating Functions & store them in new variables
     const prefix = genPrefix(firstName)
     const newFirstName = genFirstName(firstName)
     const middleName = genMiddleName(roadType, favoriteColor)
+    const newLastName = genLastName(lastName)
     const suffix = genSuffix(favoriteAnimal)
 
     //Capitalize Name Variables when needed
-    const capitalizePrefix = capitalize(prefix)
-    const capitalizeFirstName = capitalize(newFirstName)
-    const capitalizeMiddleName = capitalize(middleName)
-    const capitalizeLastName = capitalize(newLastName)
+    const capitalizedPrefix = capitalize(prefix)
+    const capitalizedFirstName = capitalize(newFirstName)
+    const capitalizedMiddleName = capitalize(middleName)
+    const capitalizedLastName = capitalize(newLastName)
 
-
-
-    //Combine all of the Name variables into a full New name
-
-    //display the new name
+    //Combine all of the Name variables in a new name
+    const fullName = `${capitalizedPrefix} ${capitalizedFirstName} ${capitalizedMiddleName} ${capitalizedLastName} ${suffix}`
+    console.log(fullName)
+    //Display the new name
+    document.getElementById('result').textContent = fullName
 }
 
 //Capitalization Function

@@ -24,7 +24,7 @@
     <main>
         <div class="contanier">
             <!--INstructions-->
-            <div class="text-center mb-3">
+            <div class="text-center mb-4">
                 <h1> Fantasy Name Generator </h1>
                 <p> Fill out the form below to generate for fantasy team name. </p>
             </div>
@@ -33,28 +33,29 @@
                 <!--Get first Name-->
                 <div class="mb-3">
                     <label for="firstName" class="form-label"> First Name </label>
-                    <input type="text" class="form-control" .id="firstName" placeholder="Enter Your First Name.">
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name."
+                        required>
                 </div>
                 <!--Get Last Name-->
                 <div class="mb-3">
                     <label for="lastName" class="form-label"> First Name </label>
-                    <input type="text" class="form-control" .id="lastName" placeholder="Enter Your Last Name.">
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name." required>
                 </div>
                 <!--Get Favorite Color-->
                 <div class="mb-3">
                     <label for="favoriteColor" class="form-label"> favorite Color </label>
-                    <input type="text" class="form-control" .id="favoriteColor"
-                        placeholder="Enter Your Favorite Color.">
+                    <input type="text" class="form-control" id="favoriteColor" placeholder="Enter Your Favorite Color."
+                        required>
                 </div>
                 <!--GEt Favorite Animal-->
                 <div class="mb-3">
-                    <label for="favroiteAnimal" class="form-label"> Favorite Animal </label>
-                    <input type="text" class="form-control" .id="favroiteAnimal"
-                        placeholder="Enter Your Favorite Animal.">
+                    <label class="form-label"> Favorite Animal </label>
+                    <input type="text" class="form-control" id="favroiteAnimal"
+                        placeholder="Enter Your Favorite Animal." required>
                 </div>
                 <!--Get Row Type-->
-                <label for="rowType" class="form-label"> Choose Road Type </label>
-                <select id="rowType" class="form-select">
+                <label for="roadType" class="form-label"> Choose Road Type </label>
+                <select id="roadType" class="form-select">
                     <option value="road">Road</option>
                     <option value="street">Street</option>
                     <option value="drive">Drive</option>
@@ -63,14 +64,16 @@
                 </select>
         </div>
         <!--Submit Button-->
-        <button type="submit" class="btn btn-light w-100" onclick="genFullName()"> Generator Name</button>
+        <div type="submit" class="btn btn-light w-100" onclick="genFullName()"> Generator Name</div>
+        </form>
         <!--Generator Name OutPut-->
-        <div class="result" id="result" </form>
+        <div class="result" id="result">
 
 
 
         </div>
 
+        </div>
     </main>
     <footer>
         <!-- place footer here -->
