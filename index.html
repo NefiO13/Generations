@@ -1,8 +1,8 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>Name Generator</title>
+    <title>My ____ Name Generator</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -10,11 +10,7 @@
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="https://use.typekit.net/gnr1ljz.css">
-
-
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -22,56 +18,55 @@
         <!-- place navbar here -->
     </header>
     <main>
-        <div class="contanier">
-            <!--INstructions-->
+        <div class="container">
+            <!--Instructions-->
             <div class="text-center mb-4">
-                <h1> Fantasy Name Generator </h1>
-                <p> Fill out the form below to generate for fantasy team name. </p>
+                <h1>Fantasy Name Generator</h1>
+                <p>Fill out the form below to generate your fantasy name!</p>
             </div>
-            <!--Form Section-->
+            <!-- Form Section-->
             <form id="fantasyForm" class="mb-4">
-                <!--Get first Name-->
+                <!-- Get First Name-->
                 <div class="mb-3">
-                    <label for="firstName" class="form-label"> First Name </label>
-                    <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name."
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name" required>
+                </div>
+                <!-- Get Last Name-->
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">First Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Enter your first name" required>
+                </div>
+                <!-- Get FavColor-->
+                <div class="mb-3">
+                    <label for="favoriteColor" class="form-label">Favorite Color</label>
+                    <input type="text" class="form-control" id="favoriteColor" placeholder="Enter your favorite color"
                         required>
                 </div>
-                <!--Get Last Name-->
+                <!-- Get FavAnimal-->
                 <div class="mb-3">
-                    <label for="lastName" class="form-label"> First Name </label>
-                    <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name." required>
-                </div>
-                <!--Get Favorite Color-->
-                <div class="mb-3">
-                    <label for="favoriteColor" class="form-label"> favorite Color </label>
-                    <input type="text" class="form-control" id="favoriteColor" placeholder="Enter Your Favorite Color."
+                    <label class="form-label">Favorite Animal</label>
+                    <input type="text" class="form-control" id="favoriteAnimal" placeholder="Enter your favorite animal"
                         required>
                 </div>
-                <!--GEt Favorite Animal-->
+                <!-- Get roadType-->
                 <div class="mb-3">
-                    <label class="form-label"> Favorite Animal </label>
-                    <input type="text" class="form-control" id="favroiteAnimal"
-                        placeholder="Enter Your Favorite Animal." required>
+                    <label class="form-label">Choose Road Type</label>
+                    <select id="roadType" class="form-select">
+                        <option selected>Select Road Type</option>
+                        <option value="road">Road</option>
+                        <option value="circle">Circle</option>
+                        <option value="street">Street</option>
+                        <option value="ave">Avenue</option>
+                        <option value="other">Other</option>
+                    </select>
                 </div>
-                <!--Get Row Type-->
-                <label for="roadType" class="form-label"> Choose Road Type </label>
-                <select id="roadType" class="form-select">
-                    <option value="road">Road</option>
-                    <option value="street">Street</option>
-                    <option value="drive">Drive</option>
-                    <option value="avenue">Avenue</option>
-                    <option value="Other">Other</option>
-                </select>
-        </div>
-        <!--Submit Button-->
-        <div type="submit" class="btn btn-light w-100" onclick="genFullName()"> Generator Name</div>
-        </form>
-        <!--Generator Name OutPut-->
-        <div class="result" id="result">
+                <!--Submit Button-->
+                <div type="submit" class="btn btn-primary w-100" onclick="genFullName()">Generate Name</div>
+            </form>
+            <!--Generated Name Output-->
+            <div class="result" id="result">
 
-
-
-        </div>
+            </div>
 
         </div>
     </main>
@@ -84,8 +79,8 @@
         crossorigin="anonymous"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous">
-        </script>
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 
